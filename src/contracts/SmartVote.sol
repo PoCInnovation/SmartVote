@@ -4,15 +4,15 @@ contract SmartVote {
     address private administrator;
     address[10] private subAdministrator;
 
-    modifier isNotSubAdministratorNorAdministratorModifier() {
+    modifier isNotSubAdministratorNorAdministratorModifier(address _address) {
         require(msg.sender != administrator && !isSubAdministrator(msg.sender));
         _;
     }
-    modifier isAdministratorModifier() {
+    modifier isAdministratorModifier(address _address) {
         require(msg.sender == administrator);
         _;
     }
-    modifier isSubAdministratorModifier() {
+    modifier isSubAdministratorModifier(address _address) {
         require(isSubAdministrator(msg.sender));
         _;
     }
