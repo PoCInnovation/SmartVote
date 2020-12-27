@@ -27,7 +27,7 @@ contract SmartVote {
    
     function isSubAdministrator(address _address) public returns(bool) {
         require(_address != address(0));
-        for (uint i = 0; len(subAdministrator); i++) {
+        for (uint i = 0; i < subAdministrator.length; i++) {
             if (subAdministrator[i] == _address) {
                 return true;
             }
