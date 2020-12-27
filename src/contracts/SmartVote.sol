@@ -25,7 +25,7 @@ contract SmartVote {
         administrator = _newAdministrator;
     }
    
-    function isSubAdministrator(address _address) public returns(bool) {
+    function isSubAdministrator(address _address) public view returns(bool) {
         require(_address != address(0));
         for (uint i = 0; i < subAdministrator.length; i++) {
             if (subAdministrator[i] == _address) {
