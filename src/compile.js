@@ -5,10 +5,10 @@ let preCompile = {
   language: "Solidity",
   sources: {
     "SmartVote.sol": {
-      content: require("fs").readFileSync(
-        "./src/contracts/SmartVote.sol",
-        "utf8"
-      ),
+      content: require("fs").readFileSync("./contracts/SmartVote.sol", "utf8"),
+    },
+    "ownable.sol": {
+      content: require("fs").readFileSync("./contracts/ownable.sol", "utf8"),
     },
   },
   settings: {
@@ -21,6 +21,7 @@ let preCompile = {
 };
 
 const output = JSON.parse(solc.compile(JSON.stringify(preCompile)));
+console.log(output);
 
 fs.writeFileSync(
   "./src/out/abi.json",
