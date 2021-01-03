@@ -14,7 +14,7 @@ contract User is SmartVote {
         require(!users[_newUser].activatedAcount);
         users[_newUser] = User(_name, _nationality, _birthDate, true);
     }
-    function disableUser(address _address) private onlyOwner onlyUser(_adress) {
-        users[_adress].activatedAcount = false;
+    function disableUser(address _address) private onlyOwner onlyUser(_address) {
+        users[_address].activatedAcount = false;
     }
 }
