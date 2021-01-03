@@ -10,12 +10,11 @@ contract SmartVote is Ownable {
     struct User {
       string name;
       string nationality;
-      uint birthDate;
+      uint64 birthDate;
       bool activatedAcount;
     }
 
-    User[] public users;
-    mapping (address => uint) public adressToUserId;
+    mapping (address => User) public users;
 
     struct AdminPoll {
       uint[] pollDate;
