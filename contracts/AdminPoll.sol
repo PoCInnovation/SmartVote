@@ -11,34 +11,31 @@ contract AdminPoll is SmartVote, SubAdministrator {
     }
 
     function adminPollIsActive(uint _adminPollId) public view returns(bool) {
-        require(_adminPollId < adminPolls.lengh);
-        require(now >= adminPolls[_adminPollId].pollDate[1] && now < adminPolls[_adminPollId].pollDate[2]);
+        require(_adminPollId < adminPolls.length);
+        require(block.timestamp >= adminPolls[_adminPollId].pollDate[1] && block.timestamp < adminPolls[_adminPollId].pollDate[2]);
+        
         uint8 positifVoteCount = 0;
         for (uint i = 0; i < numberSubAdministrator; i++) {
-           if (adminPolls[_adminPollId].subAdministratorAproval[i]) {
-               positifVoteCount++;
-           } else {
-                positifVoteCount--;
-           }
+            positifVoteCount += adminPolls[_adminPollId].subAdministratorAproval[i] ? 1 : 0;
         }
-        if (positifVoteCount <= 0)
+        if (positifVoteCount < ((numberSubAdministrator / 2) + (numberSubAdministrator % 2))) {
             return false;
+        }
         return true;
     }
 
-    function creatAdminPoll(uint[] _pollDate, string[] memory _candidateList) private
+    function creatAdminPoll(uint[3] memory _pollDate, string[] memory _candidateList) private
     onlyOwner {
-        require(_pollDate.lengh == 3 && _candidateList > 0);
+        require(_candidateList.length > 0);
         
-        bool[numberSubAdministrator] defaultSubAdministratorAproval;
-        for (uint i = 0; i < numberSubAdministrator; i++) {
-            defaultSubAdministratorAproval[i] = false;
-        }
+        bool[numberSubAdministrator] memory defaultSubAdministratorAproval;
         adminPolls.push(AdminPoll(_pollDate, _candidateList, defaultSubAdministratorAproval));
     }
+
     function subAdministratorAprovalSubmit(bool _vote, uint _adminPollId, uint _subAdministratorId) private onlySubAdministrator(msg.sender) {
         require(msg.sender == subAdministrator[_subAdministratorId]);
-        require(now < adminPolls[_adminPollId].pollDate[0]);
+        require(block.timestamp < adminPolls[_adminPollId].pollDate[0]);
+
         adminPolls[_adminPollId].subAdministratorAproval[_subAdministratorId] = _vote;
     }
 }
