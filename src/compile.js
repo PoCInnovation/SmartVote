@@ -13,6 +13,9 @@ let preCompile = {
         "utf8"
       ),
     },
+    "User.sol": {
+      content: require("fs").readFileSync("./contracts/User.sol", "utf8"),
+    },
     "ownable.sol": {
       content: require("fs").readFileSync("./contracts/ownable.sol", "utf8"),
     },
