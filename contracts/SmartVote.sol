@@ -14,6 +14,5 @@ contract SmartVote is Ownable {
       bool activatedAcount;
     }
 
-    User[] public users;
-    mapping (address => uint) public adressToUserId;
+    mapping (address => User) public users;
 }
