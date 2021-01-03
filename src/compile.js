@@ -7,6 +7,12 @@ let preCompile = {
     "SmartVote.sol": {
       content: require("fs").readFileSync("./contracts/SmartVote.sol", "utf8"),
     },
+    "SubAdministrator.sol": {
+      content: require("fs").readFileSync(
+        "./contracts/SubAdministrator.sol",
+        "utf8"
+      ),
+    },
     "ownable.sol": {
       content: require("fs").readFileSync("./contracts/ownable.sol", "utf8"),
     },
