@@ -16,4 +16,12 @@ contract SmartVote is Ownable {
 
     User[] public users;
     mapping (address => uint) public adressToUserId;
+
+    struct AdminPoll {
+      uint[] pollDate;
+      string[] candidateList;
+      bool[numberSubAdministrator] subAdministratorAproval;
+    }
+
+    AdminPoll[] public adminPolls;
 }
