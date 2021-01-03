@@ -9,7 +9,7 @@ contract User is SmartVote {
         _;
     }
 
-    function creatUser(address _newUser, string memory _name, string memory _nationality, uint _birthDate) private 
+    function creatUser(address _newUser, string memory _name, string memory _nationality, uint64 _birthDate) private 
     onlyOwner {
         require(!users[adressToUserId[_newUser]].activatedAcount);
         users.push(User(_name, _nationality, _birthDate, true));

@@ -10,7 +10,7 @@ contract SmartVote is Ownable {
     struct User {
       string name;
       string nationality;
-      uint birthDate;
+      uint64 birthDate;
       bool activatedAcount;
     }
 
