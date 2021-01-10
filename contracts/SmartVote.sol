@@ -50,7 +50,7 @@ contract SmartVote is Ownable {
     * -candidateList: an array of string representing the list of the option of vote for the user
     * -subAdministratorAproval: an array of bool representing if the subadministrator aproove
     * the poll proposition by the administrator. Each element of the array represent the choice of
-    * a specific subadministrator.
+    * a specific subadministrator
     */
     struct AdminPoll {
       uint[3] pollDate;
