@@ -3,6 +3,7 @@ pragma solidity ^0.7.4;
 
 import "./SmartVote.sol";
 import "./SubAdministrator.sol";
+import {SafeMath} from "./SafeMath.sol";
 
 /**
 * @title AdminPoll
@@ -34,10 +35,10 @@ contract AdminPoll is SmartVote, SubAdministrator {
 
         uint8 positifVoteCount = 0;
 
-        for (uint i = 0; i < numberSubAdministrator; i++) {
+        for (uint i = 0; i < numberSubAdministrator; i = SafeMath.add(i, 1)) {
             positifVoteCount += adminPolls[_adminPollId].subAdministratorAproval[i] ? 1 : 0;
         }
-        if (positifVoteCount < ((numberSubAdministrator / 2) + (numberSubAdministrator % 2))) {
+        if (positifVoteCount < SafeMath.add(SafeMath.div(numberSubAdministrator, 2), SafeMath.mod(numberSubAdministrator, 2))) {
             return false;
         }
         return true;

@@ -2,6 +2,7 @@
 pragma solidity ^0.7.4;
 
 import "./SmartVote.sol";
+import {SafeMath} from "./SafeMath.sol";
 
 /**
 * @title SubAdministrator
@@ -28,7 +29,7 @@ contract SubAdministrator is SmartVote {
     function isSubAdministrator(address _address) public view returns(bool) {
         require(_address != address(0));
 
-        for (uint8 i = 0; i < numberSubAdministrator; i++) {
+        for (uint8 i = 0; i < numberSubAdministrator; i = uint8(SafeMath.add(i, 1))) {
             if (subAdministrator[i] == _address) {
                 return true;
             }

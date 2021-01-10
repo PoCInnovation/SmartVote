@@ -19,6 +19,9 @@ let preCompile = {
     "AdminPoll.sol": {
       content: require("fs").readFileSync("./contracts/AdminPoll.sol", "utf8"),
     },
+    "SafeMath.sol": {
+      content: require("fs").readFileSync("./contracts/SafeMath.sol", "utf8"),
+    },
     "ownable.sol": {
       content: require("fs").readFileSync("./contracts/ownable.sol", "utf8"),
     },
