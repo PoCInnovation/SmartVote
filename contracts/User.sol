@@ -28,6 +28,7 @@ contract User is SmartVote {
     function creatUser(address _newUser, string memory _name, string memory _nationality, uint64 _birthDate) private
     onlyOwner {
         require(!users[_newUser].activatedAcount);
+
         users[_newUser] = User(_name, _nationality, _birthDate, true);
     }
 

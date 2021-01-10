@@ -27,6 +27,7 @@ contract SubAdministrator is SmartVote {
     */
     function isSubAdministrator(address _address) public view returns(bool) {
         require(_address != address(0));
+
         for (uint8 i = 0; i < numberSubAdministrator; i++) {
             if (subAdministrator[i] == _address) {
                 return true;
@@ -44,6 +45,7 @@ contract SubAdministrator is SmartVote {
     onlyOwner {
         require(_indexValue < numberSubAdministrator);
         require(!isSubAdministrator(_newSubAdministrator));
+
         subAdministrator[_indexValue] = _newSubAdministrator;
     }
 }
