@@ -39,7 +39,6 @@ contract SmartVote is Ownable {
     */
     mapping (address => User) public users;
 
-
     /**
     * @dev The AdminPoll structur is there to represent a poll created by the
     * administrator. For now, the poll has the following fields:
