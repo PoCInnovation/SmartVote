@@ -6,12 +6,12 @@ import "./SmartVote.sol";
 /**
 * @title SubAdministrator
 * @dev The SubAdministrator contract is a subcontract to the SmartVote
-* contract. It is there to represent all the interaction with
-* a subadministrator or by a user of subadministrator.
+* contract. It is there to represent all the interactions with
+* a subadministrator.
 */
 contract SubAdministrator is SmartVote {
     /**
-    * @dev This modifier will tell if a given address represent
+    * @dev This modifier will tell if a given address represents
     * one of the subadministrator. It works with the isSubAdministrator
     * function.
     */
@@ -22,8 +22,8 @@ contract SubAdministrator is SmartVote {
 
     /**
     * @dev The isSubAdministrator will return a bool, true if the
-    * given address (_address) represent the address of a subadministrator,
-    * and false if he is not.
+    * given address (_address) represents the address of a subadministrator,
+    * and false if it is not.
     */
     function isSubAdministrator(address _address) public view returns(bool) {
         require(_address != address(0));
