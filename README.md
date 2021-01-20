@@ -4,7 +4,7 @@ A voting software, decentralized and secured running on the blockchain.
 
 ## Introduction
 
-The idea of SmartVote (SmVo) is to make it possible to follow and participate to an election without having to be vigilant
+The idea of SmartVote is to make it possible to follow and participate to an election without having to be vigilant
 about the eligibility of the organizer. Indeed, running an election trough a blockchain allow us to make the poll system
 100% secure ! No one will be able to make "fake votes" or to fake the output of an election !
 
@@ -44,7 +44,7 @@ The user is the main part of the SmSv; it is them that will receive polls and th
 the most ! Without the users, the administrator and the subadministrators are powerless; in fact, the administrator and the subadministrators are there to guide the users and avoid the rising of unwanted features; they are there to keep everyone
 safe from possible "coup d'état".
 
-## The future of SmVo
+## The future of SmartVote
 
 Our goal is that the more we go forward within this project, the more the Subadministrators and the Users have power. For
 the moment we focus on a simple voting system following the above architecture; we still have to implement a prettier interface for the user thanks to "D3.js". Once all the basics will be there, we will be able to focus on an architecture
@@ -52,4 +52,4 @@ making the users the primary decision maker with the Subadministrators.
 
 #### Credit
 
-Project followed by Quentin Fringhian, and managed by Thomas Chevauts and Luca Girl-Friend.
+Project followed by Quentin Fringhian, and managed by Thom ChevalDe3 and Lukas GrilledFour.
