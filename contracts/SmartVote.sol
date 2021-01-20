@@ -52,7 +52,7 @@ contract SmartVote is Ownable {
     * a specific subadministrator
     */
     struct AdminPoll {
-      uint[3] pollDate;
+      uint64[3] pollDate;
       string[] candidateList;
       bool[numberSubAdministrator] subAdministratorAproval;
     }

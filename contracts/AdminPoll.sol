@@ -50,7 +50,7 @@ contract AdminPoll is SmartVote, SubAdministrator {
     * is set with the 3 dates of events for the poll (_pollDate) and the
     * list of options for the vote (_candidateList).
     */
-    function creatAdminPoll(uint[3] memory _pollDate, string[] memory _candidateList) private
+    function creatAdminPoll(uint64[3] memory _pollDate, string[] memory _candidateList) private
     onlyOwner {
         require(_candidateList.length > 0);
 
