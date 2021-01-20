@@ -52,4 +52,4 @@ making the users the primary decision maker with the Subadministrators.
 
 #### Credit
 
-Project followed by Quentin Fringhian, and managed by Thom ChevalDe3 and Lukas GrilledFour.
+Project followed by Quentin Fringhian, and managed by Tom Chauveau and Luca Georges Francois.
