@@ -1,2 +1,4 @@
 node_modules
-out
+
+abi.json
+bytecode.json
