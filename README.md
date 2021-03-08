@@ -18,11 +18,11 @@ Here you can see what we had in minds when creating our architecture.
 
 First, a representation of how SmartVote would work:
 
-![General_TimeLine_Idea](./github/asset/General_TimeLine_Idea.png)
+![General_TimeLine_Idea](./.github/asset/General_TimeLine_Idea.png)
 
 Then, a representation of what our architecture would look like:
 
-![Total_Overview_Project_Advencement](./github/asset/Total_Overview_Project_Advencement.png)
+![Total_Overview_Project_Advencement](./.github/asset/Total_Overview_Project_Advencement.png)
 
 ## The architecture
 
