@@ -40,7 +40,7 @@ Whenever the Administrator wants to submit a poll, the subadministartors have a 
 
 ### The User
 
-The user is the main part of the SmSv; it is them that will receive polls and they will choose the option that they prefer
+The user is the main part of the SmartVote; it is them that will receive polls and they will choose the option that they prefer
 the most ! Without the users, the administrator and the subadministrators are powerless; in fact, the administrator and the subadministrators are there to guide the users and avoid the rising of unwanted features; they are there to keep everyone
 safe from possible "coup d'état".
 
