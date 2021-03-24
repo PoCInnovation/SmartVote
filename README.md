@@ -12,6 +12,18 @@ We are using Etherium as our blockchain; Etherium let us interact with it very e
 
 Futhermore, by letting our project as "opensource", we make it possible for other people to recreate our voting system as they want, and they will be able to easily fix possible mistakes without having theme reverse engineering our system!
 
+## SmartVote Draft
+
+Here you can see what we had in minds when creating our architecture.
+
+First, a representation of how SmartVote would work:
+
+![General_TimeLine_Idea](./.github/asset/General_TimeLine_Idea.png)
+
+Then, a representation of what our architecture would look like:
+
+![Total_Overview_Project_Advencement](./.github/asset/Total_Overview_Project_Advencement.png)
+
 ## The architecture
 
 As said earlier, our poll system tries to be the most secure possible, this is why we have different actors interacting
@@ -40,9 +52,19 @@ Whenever the Administrator wants to submit a poll, the subadministartors have a 
 
 ### The User
 
-The user is the main part of the SmSv; it is them that will receive polls and they will choose the option that they prefer
+The user is the main part of the SmartVote; it is them that will receive polls and they will choose the option that they prefer
 the most ! Without the users, the administrator and the subadministrators are powerless; in fact, the administrator and the subadministrators are there to guide the users and avoid the rising of unwanted features; they are there to keep everyone
 safe from possible "coup d'état".
+
+## Where are we ?
+
+Here's SmartVote time line:
+
+- **Sprint 1**: Research phase about the used technologies.
+- **Sprint 2**: Building the basic structure of our different contracts.
+- **Sprint 3**: Building our first interactions between our type of users (Administrators to Subadministrators).
+- **Sprint 4**: Reviewing our work so far.
+- **Sprint 5**: Implementing tests on our contract and try it out locally.
 
 ## The future of SmartVote
 
