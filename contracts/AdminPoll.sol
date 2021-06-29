@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.7.4;
+pragma abicoder v2;
 
 import "./SmartVote.sol";
 import "./SubAdministrator.sol";
@@ -50,7 +51,7 @@ contract AdminPoll is SmartVote, SubAdministrator {
     * is set with the 3 dates of events for the poll (_pollDate) and the
     * list of options for the vote (_candidateList).
     */
-    function creatAdminPoll(uint64[3] memory _pollDate, string[] memory _candidateList) private
+    function creatAdminPoll(uint64[3] memory _pollDate, string[] memory _candidateList) external
     onlyOwner {
         require(_candidateList.length > 0);
 
@@ -64,7 +65,8 @@ contract AdminPoll is SmartVote, SubAdministrator {
     * It will update the approval of a subadministrator (_vote) for a given poll (_adminPollId).
     * It will need the id of the subadministrator (_subAdministratorId) voting.
     */
-    function subAdministratorAprovalSubmit(bool _vote, uint _adminPollId, uint _subAdministratorId) private onlySubAdministrator(msg.sender) {
+    function subAdministratorAprovalSubmit(bool _vote, uint _adminPollId, uint _subAdministratorId) external onlySubAdministrator(msg.sender) {
+        require(_adminPollId < adminPolls.length);
         require(msg.sender == subAdministrator[_subAdministratorId]);
         require(block.timestamp < adminPolls[_adminPollId].pollDate[0]);
 

@@ -42,7 +42,7 @@ contract SubAdministrator is SmartVote {
     * It will set the given address (_address) as a subadministrator at the given
     * position (_indexValue) in the array.
     */
-    function setSubAdministrator(uint _indexValue, address _newSubAdministrator) private
+    function setSubAdministrator(uint _indexValue, address _newSubAdministrator) external
     onlyOwner {
         require(_indexValue < numberSubAdministrator);
         require(!isSubAdministrator(_newSubAdministrator));

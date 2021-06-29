@@ -25,7 +25,7 @@ contract User is SmartVote {
     * information (_name, _nationality, _birthDate). His account is automatically
     * activated.
     */
-    function creatUser(address _newUser, string memory _name, string memory _nationality, uint64 _birthDate) private
+    function creatUser(address _newUser, string memory _name, string memory _nationality, uint64 _birthDate) external
     onlyOwner {
         require(!users[_newUser].activatedAcount);
 
@@ -37,7 +37,7 @@ contract User is SmartVote {
     * can only be called for a user with an activated account. It will unactivate
     * the account of a given user (_address);
     */
-    function disableUser(address _address) private onlyOwner onlyUser(_address) {
+    function disableUser(address _address) external onlyOwner onlyUser(_address) {
         users[_address].activatedAcount = false;
     }
 }
